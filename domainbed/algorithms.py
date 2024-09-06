@@ -48,7 +48,7 @@ ALGORITHMS = [
     'IB_IRM',
     'ITTA',
     'RIDG',
-    'CauseEB'
+    'CausEB'
 ]
 
 def get_algorithm_class(algorithm_name):
@@ -82,13 +82,13 @@ class Algorithm(torch.nn.Module):
         raise NotImplementedError
 
 
-class CauseEB(Algorithm):
+class CausEB(Algorithm):
     """
         A Causal Inspired Early-Branching Structure for Domain Generalization
     """
     
     def __init__(self, input_shape, num_classes, num_domains, hparams):
-        super(CauseEB, self).__init__(input_shape, num_classes, num_domains,
+        super(CausEB, self).__init__(input_shape, num_classes, num_domains,
                                    hparams)
         self.eps = 1e-6
         self.MSEloss = nn.MSELoss()
