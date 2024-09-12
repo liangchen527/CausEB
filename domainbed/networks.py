@@ -153,7 +153,7 @@ class ResNet(torch.nn.Module):
             self.network = torchvision.models.resnet18(pretrained=True)
             self.n_outputs = 512
         else:
-            self.network = torchvision.models.resnet18(pretrained=True)
+            self.network = torchvision.models.resnet50(pretrained=True)
             self.n_outputs = 2048
 
         # self.network = remove_batch_norm_from_resnet(self.network)
@@ -202,7 +202,7 @@ class ResNet_ITTA(torch.nn.Module):
             self.network = torchvision.models.resnet18(pretrained=True)
             self.n_outputs = 512
         else:
-            self.network = torchvision.models.resnet18(pretrained=True)
+            self.network = torchvision.models.resnet50(pretrained=True)
             self.n_outputs = 2048
 
         nc = input_shape[0]
@@ -435,7 +435,7 @@ class ResNet_base(torch.nn.Module):
             self.network = torchvision.models.resnet18(pretrained=True)
             self.n_outputs = 512
         else:
-            self.network = torchvision.models.resnet18(pretrained=True)
+            self.network = torchvision.models.resnet50(pretrained=True)
             self.n_outputs = 2048
 
         # self.network = remove_batch_norm_from_resnet(self.network)
@@ -502,7 +502,7 @@ class ResNet_trunk(torch.nn.Module):
             self.network = torchvision.models.resnet18(pretrained=True)
             self.n_outputs = 512
         else:
-            self.network = torchvision.models.resnet18(pretrained=True)
+            self.network = torchvision.models.resnet50(pretrained=True)
             self.n_outputs = 2048
 
         # self.network = remove_batch_norm_from_resnet(self.network)
